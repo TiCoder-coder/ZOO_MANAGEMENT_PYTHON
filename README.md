@@ -1,5 +1,5 @@
 ## ZOO MANAGEMENT
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fduhocduytan.vn%2Ftu-van-du-hoc%2Fdu-hoc-my-nganh-sinh-hoc-va-quan-ly-vuon-thu-biology-and-management-of-zoo-animals-portland-community-collge.html&psig=AOvVaw1zqjt8dZ0_2mbtlJR7a_gq&ust=1761301039903000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODG2eiLupADFQAAAAAdAAAAABAL
+![Mô tả ảnh]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fduhocduytan.vn%2Ftu-van-du-hoc%2Fdu-hoc-my-nganh-sinh-hoc-va-quan-ly-vuon-thu-biology-and-management-of-zoo-animals-portland-community-collge.html&psig=AOvVaw1zqjt8dZ0_2mbtlJR7a_gq&ust=1761301039903000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODG2eiLupADFQAAAAAdAAAAABAL](https://duhocduytan.vn/upload/news/royalty-free-zoo-animals-clipart-illustration-1090367.jpg))
 
 ZOO_MANAGEMENT – Hệ thống quản lý vườn thú thông minh được xây dựng bằng Python + Django, tích hợp MongoDB, chuẩn MVC + Repository Pattern, bảo mật bằng JWT, và tài liệu API trực quan qua Swagger.
 Dự án cho phép quản lý toàn diện:
