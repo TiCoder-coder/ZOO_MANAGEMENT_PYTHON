@@ -1,0 +1,12 @@
+# Core Python packages
+Django>=4.2,<5.0
+djangorestframework>=3.15,<4.0
+pymongo>=4.5,<5.0
+python-decouple>=3.8,<4.0
+PyJWT>=2.8,<3.0
+
+# Swagger / API Documentation
+drf-yasg>=1.21,<2.0
+
+# Utilities / security
+django-environ>=1.0,<2.0  # Optional, if you use .env files

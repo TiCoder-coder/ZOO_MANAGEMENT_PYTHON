@@ -1,0 +1,24 @@
+API POST
+{
+  "idFeedRecord": "feedrecord753",
+  "animalIdFeedRecord": "A1000",
+  "foodId": "FOOD11ư75d23",
+  "quantity": 2147483647
+}
+
+API GET: Execute
+
+
+API GET ID: feedrecord753
+
+
+API PUT: feedrecord753
+{
+  "animalIdFeedRecord": "A1000",
+  "foodId": "FOOD11ư75d23",
+  "quantity": 741
+}
+
+
+API DELETE; feedrecord753
+

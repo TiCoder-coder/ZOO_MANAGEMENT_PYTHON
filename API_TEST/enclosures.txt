@@ -1,0 +1,33 @@
+API POST:
+{
+  "id": "anima741852963",
+  "name": "Hippo",
+  "age": 14,
+  "species": "Animal",
+  "gender": "Male",
+  "weight": 523,
+  "healthStatus": "Healthy",
+  "enclosureId": "ENC100"
+}
+
+
+API GET: Execute
+
+
+API GET ID: anima741852963
+
+
+API PUT: anima741852963
+{
+  "name": "Hippo",
+  "age": 15,
+  "species": "Animal Hippo",
+  "gender": "Male",
+  "weight": 553,
+  "healthStatus": "Healthy",
+  "enclosureId": "ENC100"
+}
+
+
+API DELETE: anima741852963
+

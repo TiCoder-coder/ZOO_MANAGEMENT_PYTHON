@@ -1,0 +1,24 @@
+API POST
+{
+  "idFood": "FOOD753",
+  "nameFood": "SHUSHI",
+  "typeFood": "Meat",
+  "caloriesPerUnit": 200
+}
+
+
+API GET:
+
+
+API GET ID:
+
+
+API PUT: FOOD753
+{
+  "nameFood": "SHUSHI",
+  "typeFood": "Meat",
+  "caloriesPerUnit": 100
+}
+
+API DELETE: FOOD753
+

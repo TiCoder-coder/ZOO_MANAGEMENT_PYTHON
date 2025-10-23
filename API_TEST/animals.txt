@@ -1,0 +1,32 @@
+API POST: http://127.0.0.1:8000/api/animal/
+{
+    "name": "White Tiger",
+    "age": 6,
+    "species": "Panthera Tiger",
+    "gender": "Male",
+    "weight": 180,
+    "healthStatus": "Healthy",
+    "enclosureId": "ENC1234567890"
+}
+
+
+API GET: khong can request
+
+
+API GET ID: A0123456789
+
+
+API PUT: A0123456789
+{
+    "name": "White Tiger",
+    "age": 7,
+    "species": "Panthera Tiger",
+    "gender": "Female",
+    "weight": 170,
+    "healthStatus": "Healthy",
+    "enclosureId": "ENC1234567890"
+}
+
+
+API DELETE: 0123456789
+

@@ -1,0 +1,30 @@
+API POST
+{
+  "name": "John Manager",
+  "userName": "hehemanagers",
+  "password": "John@1234",
+  "email": "john.manager@example.com",
+  "role": "manager"
+}
+
+
+API GET: Execute
+
+
+API GET ID: 68f8c5a013385a4dea0ad0a8
+
+
+API PATCH: 68f8c5a013385a4dea0ad0a8
+{
+  "name": "New Staffsssss",
+  "userName": "new_staffs",
+  "email": "newtaffff@example.com",
+  "role": "Staff",
+  "is_active": true,
+  "failed_attempts": 0,
+  "lock_until": null
+}
+
+API DELETE: 68f8c5a013385a4dea0ad0a8
+
+

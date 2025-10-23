@@ -1,0 +1,22 @@
+Run:
+python manage.py runserver
+
+Tao manager:
+python manage.py create_admin
+
+Login:
+http://127.0.0.1:8000/api/auth/login/
+
+
+
+{
+  "userName": "VoAnhNhat",
+  "password": "Nhat@16122006"
+}
+
+
+
+mongosh
+use zoo_management;
+show collections;
+db.managers.find({}, {username:1, password:1}).limit(5).pretty()
