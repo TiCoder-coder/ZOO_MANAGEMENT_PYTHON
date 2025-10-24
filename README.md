@@ -1,4 +1,5 @@
 ## ZOO MANAGEMENT
+!(Ảnh)[https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-zoo-animal-clipart-with-transparent-background-png-image_14193145.png]
 ZOO_MANAGEMENT – Hệ thống quản lý vườn thú thông minh được xây dựng bằng Python + Django, tích hợp MongoDB, chuẩn MVC + Repository Pattern, bảo mật bằng JWT, và tài liệu API trực quan qua Swagger.
 Dự án cho phép quản lý toàn diện:
 
