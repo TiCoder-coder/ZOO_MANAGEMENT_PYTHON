@@ -1,7 +1,7 @@
 ## ZOO MANAGEMENT
 
 
-![Zoo Management Preview](images/zoo_preview.png)
+![Zoo Management Preview](https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-zoo-animal-clipart-with-transparent-background-png-image_14193145.png)
 
 
 
