@@ -1,0 +1,31 @@
+<!-- gate-left.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="gL" x1="0" x2="1">
+      <stop offset="0" stop-color="#f6d28a"></stop>
+      <stop offset="1" stop-color="#e6b24a"></stop>
+    </linearGradient>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence baseFrequency="0.6" numOctaves="2" stitchTiles="stitch" result="noise"></feTurbulence>
+      <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      <feBlend in="SourceGraphic" in2="noise" mode="overlay"></feBlend>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#gL)"></rect>
+  <!-- vertical panels -->
+  <g fill="#c98e2e" opacity="0.12">
+    <rect x="20" y="40" width="30" height="720"></rect>
+    <rect x="70" y="40" width="30" height="720"></rect>
+    <rect x="120" y="40" width="30" height="720"></rect>
+  </g>
+
+  <!-- decorations -->
+  <g transform="translate(40,40)" fill="#fff" opacity="0.06">
+    <circle cx="40" cy="40" r="30"></circle>
+    <circle cx="40" cy="130" r="20"></circle>
+  </g>
+
+  <!-- wood grain overlay -->
+  <rect x="0" y="0" width="100%" height="100%" fill="none" filter="url(#grain)"></rect>
+</svg>

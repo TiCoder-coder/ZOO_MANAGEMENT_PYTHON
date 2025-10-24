@@ -1,6 +1,4 @@
 ## ZOO MANAGEMENT
-![Mô tả ảnh](https://duhocduytan.vn/upload/news/royalty-free-zoo-animals-clipart-illustration-1090367.jpg)
-
 ZOO_MANAGEMENT – Hệ thống quản lý vườn thú thông minh được xây dựng bằng Python + Django, tích hợp MongoDB, chuẩn MVC + Repository Pattern, bảo mật bằng JWT, và tài liệu API trực quan qua Swagger.
 Dự án cho phép quản lý toàn diện:
 
@@ -216,7 +214,7 @@ Người quản lý (phân quyền Admin/Staff, khóa tài khoản tự động 
 ## 💻 Hướng dẫn cài đặt
 1. Clone repo:
 ```bash
-git clone https://github.com/TiCoder-coder/Z00_MANAGEMENT_PYTHON.git
+git clone https://github.com/TiCoder-coder/ZOO_MANAGEMENT_PYTHON.git
 cd Z00_MANAGEMENT_PYTHON
 
 2. Tạo virtual environment:

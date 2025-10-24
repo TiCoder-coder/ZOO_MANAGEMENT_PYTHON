@@ -39,7 +39,7 @@ ROOT_URLCONF = "ZOO_MANAGEMENT.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'zoo_app' / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -49,6 +49,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_DIRS = [
+    BASE_DIR / "zoo_app" / "static",
 ]
 
 WSGI_APPLICATION = "ZOO_MANAGEMENT.wsgi.application"
@@ -107,3 +111,7 @@ SWAGGER_SETTINGS = {
         }
     },
 }
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "zoo_app" / "static"]
+TEMPLATES[0]['DIRS'] = [BASE_DIR / "zoo_app" / "templates"]

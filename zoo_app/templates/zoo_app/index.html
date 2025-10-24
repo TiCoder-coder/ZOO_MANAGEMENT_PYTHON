@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zoo Management</title>
+
+    <link rel="stylesheet" href="{% static 'zoo_app/css/style.css' %}">
+</head>
+<body>
+    <div class="hero-wrap" id="heroWrap">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
+
+        <!-- 🐾 canvas động vật nhỏ ngồi trên cổng -->
+        <canvas id="gateAnimalsCanvas" aria-hidden="true"></canvas>
+
+        <!-- gate panels with SVG backgrounds -->
+        <div class="gate gate-left" id="gateLeft" aria-hidden="true"></div>
+        <div class="gate gate-right" id="gateRight" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to <span class="accent">Zoo Management System</span>
+            </h1>
+            <p class="hero-sub">
+                Manage your animals, feed records, and more — quick and easy.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="openGateBtn">Open the Gate →</button>
+            </div>
+        </div>
+
+        <!-- confetti canvas overlay -->
+        <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'zoo_app/js/main.js' %}"></script>
+</body>
+</html>

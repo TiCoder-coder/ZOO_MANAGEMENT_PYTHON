@@ -1,0 +1,126 @@
+:root{
+    --accent:#13c08b;
+    --text:#ffffff;
+    --overlay: rgba(6,10,15,0.45);
+    --transition: 900ms cubic-bezier(.2,.9,.2,1);
+}
+
+html,body{height:100%; margin:0; font-family:Inter, Roboto, Arial, sans-serif;}
+
+/* HERO */
+.hero-wrap{
+    position:relative;
+    width:100%;
+    min-height:80vh;
+    height:calc(100vh - 40px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    perspective: 1200px; /* needed for 3D gate rotateY */
+}
+
+/* background */
+.hero-bg{
+    position:absolute; inset:0;
+    background-image: url("../images/zoo.jpg");
+    background-size: cover; background-position:center center;
+    transform: scale(1.06);
+    filter: blur(3px) saturate(1.05) brightness(0.86);
+    transition: transform var(--transition), filter var(--transition);
+    z-index:0;
+}
+.hero-overlay{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.35));
+    z-index:2;
+}
+
+/* GATES using SVG backgrounds */
+.gate{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:50%;
+    z-index:6;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    transition: transform var(--transition), opacity 300ms ease;
+    transform-origin: center;
+    pointer-events:none;
+}
+.gate-left{
+    left:0;
+    background-image: url('../images/gate-left.svg');
+    transform-origin: left center;
+    transform: rotateY(0deg);
+}
+.gate-right{
+    right:0;
+    background-image: url('../images/gate-right.svg');
+    transform-origin: right center;
+    transform: rotateY(0deg);
+}
+
+/* OPEN STATE: rotate gates outward (3D) */
+.hero-wrap.open .gate-left{
+    transform: rotateY(-85deg) translateX(-5%);
+    opacity: 0;
+}
+.hero-wrap.open .gate-right{
+    transform: rotateY(85deg) translateX(5%);
+    opacity: 0;
+}
+
+/* when open, make bg sharp */
+.hero-wrap.open .hero-bg{
+    transform: scale(1);
+    filter: blur(0px) saturate(1.08) brightness(1);
+}
+
+/* CONTENT */
+.hero-content{
+    position:relative; z-index:10; text-align:center; color:var(--text);
+    padding: 28px;
+    max-width:980px;
+}
+.hero-title{
+    font-size: clamp(30px, 4vw, 56px);
+    margin:0 0 10px;
+    font-weight:700; letter-spacing:-0.02em;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+.hero-title .accent{ color:var(--accent); }
+.hero-sub{ font-size:clamp(14px,1.5vw,18px); margin:0 0 20px; opacity:.95; }
+
+/* button */
+.btn{ display:inline-block; padding:12px 20px; border-radius:8px; font-weight:600; cursor:pointer; border:0;}
+.btn-primary{ background: linear-gradient(180deg, var(--accent), #0ea175); color: #fff; box-shadow: 0 10px 28px rgba(7,12,16,0.18); }
+.btn-primary:hover{ transform: translateY(-3px); transition: transform 200ms; }
+
+#gateAnimalsCanvas {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 180px;
+    pointer-events: none;
+    z-index: 6;
+}
+
+/* Confetti canvas (on top) */
+.confetti-canvas{
+    position:absolute;
+    inset:0;
+    z-index:20;
+    pointer-events:none;
+}
+
+/* small device tweaks */
+@media (max-width:720px){
+    .hero-wrap{ height:70vh; }
+    .gate{ width:60%; }
+    .hero-title{ font-size:26px;}
+}
