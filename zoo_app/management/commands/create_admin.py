@@ -3,7 +3,7 @@
 from django.core.management.base import BaseCommand                                             # Khai bao lop co so de goi lenh quan li -- su dung handle(). stdput()
 from django.contrib.auth.hashers import make_password
 from zoo_app.models.managersModel import ManagerModel
-from zoo_app.services.managersService import _apply_peper, ManagerService
+from zoo_app.services.managersService import _apply_pepper, ManagerService
 import os
 from dotenv import load_dotenv
 from pathlib import Path
