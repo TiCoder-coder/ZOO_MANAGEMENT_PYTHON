@@ -255,3 +255,11 @@ Các endpoints được phân theo từng model:
  - /managers/
 
 Phân quyền theo role và xác thực bằng JWT token.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧑‍💻 Tác giả
+
+👤 Vo Anh Nhat
+📍 Đại học Giao thông vận tải
+📧 Email: voanhnhat1612@gmail.com
