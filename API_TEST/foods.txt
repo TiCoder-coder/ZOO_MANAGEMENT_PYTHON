@@ -2,7 +2,7 @@ API POST
 
 True test:
     {
-      "idFood": "FOOD753789",
+      "idFood": "ENC741258789",
       "nameFood": "SHUSHI",
       "typeFood": "Meat",
       "caloriesPerUnit": 200
@@ -20,12 +20,12 @@ True test:
 API GET: Execute
 
 
-API GET ID: FOOD753789
+API GET ID: ENC741258789
 
 
-API PUT: FOOD753789
+API PUT: ENC741258789
     {
-      "idFood": "FOOD753789",
+      "idFood": "ENC741258789",
       "nameFood": "SHUSHI",
       "typeFood": "Meat",
       "caloriesPerUnit": 200
@@ -38,5 +38,5 @@ API PUT: FOOD753789
       "typeFood": "Meat",
       "caloriesPerUnit": -200
     }
-API DELETE: FOOD753789
+API DELETE: ENC741258789
 
