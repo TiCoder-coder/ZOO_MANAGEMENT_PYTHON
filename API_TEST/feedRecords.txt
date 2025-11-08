@@ -20,10 +20,10 @@ API POST
 API GET: Execute
 
 
-API GET ID: feedrecord753
+API GET ID: ENC741258789
 
 
-API PUT: feedrecord753
+API PUT: ENC741258789
 True test:
 {
   "idFeedRecord": "feedrecord757893",
@@ -34,10 +34,10 @@ True test:
 
 False test:
 {
-  "idFeedRecord": "feedrecord757893",
+  "idFeedRecord": "ENC741258789",
   "animalIdFeedRecord": "A1000",
   "foodId": "FOOD11ư75d23",
   "quantity": -741
 }
 
-API DELETE; feedrecord753
+API DELETE: ENC741258789
