@@ -25,12 +25,12 @@ False test:
 API GET: khong can request
 
 
-API GET ID: Animal123
+API GET ID: Animal1233443
 
 
-API PUT: Animal123
+API PUT: Animal1233443
 {
-    "id": "Animal124",
+    "id": "Animal1233443",
     "name": "White Tiger",
     "age": 7,
     "species": "Panthera Tiger",
@@ -41,5 +41,5 @@ API PUT: Animal123
 }
 
 
-API DELETE: Animal123
+API DELETE: Animal1233443
 
