@@ -5,6 +5,13 @@ from zoo_app.middleware.auth import require_manager, require_staff_or_manager
 
 # --------------------------------------------- CLASS KHONG TRUC TIEP TUONG TAC VOI DATABASE MA SE THONG QUA REPOSITORY DE TUONG TAC ----------------------------------------------------------------------- 
 # ------------------------------------------------------------------VA PHAN QUYEN SU DUNG CHO STAFF HAY MANAGER VA ADMIN------------------------------------------------------------------------------------    
+# HAM DUNG DE CHUAN CHUOI HO VA TEN CHO DUNG-----------------------------------------------------------------------------
+def chuan_hoa_ho_ten(ho_ten_raw: str) -> str:
+        
+    # Chia chuoi ra va sau do viet hoa cac chu cai dau roi gop lai
+    words = ho_ten_raw.split()
+    return " ".join([word.capitalize() for word in words])
+
 class AnimalService:
     
     
@@ -13,7 +20,19 @@ class AnimalService:
     def create_animal(user, validated_data):
         require_manager(user)                                                                 # PHAN QUYEN: CHI CO MANAGER MOI DUOC SU DUNG
         try:
+
+            age = validated_data.get("age")
+            if age is None or int(age) < 0:
+                raise ValidationError("Age must be larger than 0.")
             
+            weight = validated_data.get("weight")
+            if weight is None or int(weight) < 0:
+                raise ValidationError("Weight must be larger than 0.")
+
+
+            validated_data["name"] = chuan_hoa_ho_ten(validated_data.get("name", ""))
+
+
             # Tu dong tao createAt, updateAt
             validated_data["createdAt"] = datetime.now(timezone.utc)
             validated_data["updatedAt"] = datetime.now(timezone.utc)
@@ -29,6 +48,8 @@ class AnimalService:
             # Chuyen doi object -> str de in ra (tranh loi drf khong doc duoc)
             if "_id" in new_animal:
                 new_animal["_id"] = str(new_animal["_id"])
+
+            
 
             return new_animal
 
@@ -85,9 +106,16 @@ class AnimalService:
             if not existing_animal:
                 raise ValidationError(f"No animal found with id: {idAnimal}")
 
+            age = validated_data.get("age")
+            if age is None or int(age) < 0:
+                raise ValidationError("Age must be larger than 0.")
+            
+            weight = validated_data.get("weight")
+            if weight is None or int(weight) < 0:
+                raise ValidationError("Weight must be larger than 0.")
             # Cap nhap lai updateAt
             validated_data["updatedAt"] = datetime.now(timezone.utc)
-
+            validated_data["name"] = chuan_hoa_ho_ten(validated_data.get("name", ""))
             # Khong cap nhap id
             if "id" in validated_data:
                 validated_data.pop("id")
