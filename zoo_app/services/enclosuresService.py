@@ -23,6 +23,12 @@ def convert_objectid(obj):
 
 # --------------------------------------------- CLASS KHONG TRUC TIEP TUONG TAC VOI DATABASE MA SE THONG QUA REPOSITORY DE TUONG TAC ----------------------------------------------------------------------- 
 # ------------------------------------------------------------------VA PHAN QUYEN SU DUNG CHO STAFF HAY MANAGER VA ADMIN------------------------------------------------------------------------------------    
+# HAM DUNG DE CHUAN CHUOI HO VA TEN CHO DUNG-----------------------------------------------------------------------------
+def chuan_hoa_ho_ten(ho_ten_raw: str) -> str:
+        
+    # Chia chuoi ra va sau do viet hoa cac chu cai dau roi gop lai
+    words = ho_ten_raw.split()
+    return " ".join([word.capitalize() for word in words])
 
 class EnclosureService:
 
@@ -32,11 +38,22 @@ class EnclosureService:
     def create_enclosure(user, validated_data):
         require_manager(user)                                                                # PHAN QUYEN: CHI CO MANAGER MOI DUOC SU DUNG
         try:
-            
+            capacity = validated_data.get("capacity")
+            try:
+                if capacity is None or int(capacity) <= 0:
+                    raise ValidationError("Capacity must be greater than 0.")
+            except (ValueError, TypeError):
+                raise ValidationError("Capacity must be a valid integer greater than 0.")
+
+            # kiểm tra tên
+            name_raw = validated_data.get("nameEnclosure")
+            if not name_raw:
+                raise ValidationError("NameEnclosure cannot be empty.")
+            validated_data["nameEnclosure"] = chuan_hoa_ho_ten(name_raw)
             # Tu dong tao createAt, updateAt
             validated_data["createAt"] = datetime.now(timezone.utc)
             validated_data["updateAt"] = datetime.now(timezone.utc)
-            
+
             # Thong qua rang repository de insert du lieu vao database
             result = EnclosureRepository.insert_one(validated_data)
             
@@ -88,7 +105,9 @@ class EnclosureService:
             existing = EnclosureRepository.find_by_id(idEnclosure)
             if not existing:
                 raise ValidationError(f"No enclosure found with id: {idEnclosure}")
-
+            capacity = validated_data.get("capacity")
+            if capacity is None or int(capacity) < 0:
+                raise ValidationError("Error. Capacity must be larger than 0.")
             # Giu nguyen cac attribute cu neu khong co thong tin moi
             for k, v in existing.items():
                 if k not in validated_data:
