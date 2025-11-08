@@ -24,7 +24,7 @@ API GET: Execute
 API GET ID: ENC741258789
 
 
-API PUT: anima741852963
+API PUT: ENC741258789
 True test:
   {
     "idEnclosure": "ENC741258789",
@@ -36,7 +36,7 @@ True test:
 
   False test:
   {
-    "idEnclosure": "ENC74125dddd8",
+    "idEnclosure": "ENC741258789",
     "nameEnclosure": "enclosure",
     "areaSize": "100m^2",
     "climate": "Tropical",
