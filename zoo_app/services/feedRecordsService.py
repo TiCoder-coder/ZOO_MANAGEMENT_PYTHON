@@ -38,7 +38,9 @@ class FeedRecordService:
             validated_data["feedAt"] = datetime.now(timezone.utc)
             validated_data["createAt"] = datetime.now(timezone.utc)
             validated_data["updateAt"] = datetime.now(timezone.utc)
-
+            quantity = validated_data.get("quantity")
+            if quantity is None or int(quantity) < 0:
+                raise ValidationError("Error. Quantity must be larger than 0.")
             # Them feedRecord vao database
             FeedRecordRepository.insert_one(validated_data)
             return validated_data["idFeedRecord"]
@@ -88,7 +90,9 @@ class FeedRecordService:
         feedRecord = FeedRecordRepository.find_by_id(idFeedRecord)
         if not feedRecord:
             raise NotFound(detail=f"Không tìm thấy món ăn với idFeedRecord '{idFeedRecord}'.")
-
+        quantity = validated_data.get("quantity")
+        if quantity is None or int(quantity) < 0:
+            raise ValidationError("Error. Quantity must be larger than 0.")
         # Goi ham cap nhap theo id
         FeedRecordRepository.update_by_id(idFeedRecord, validated_data)
         updated = FeedRecordRepository.find_by_id(validated_data.get('idFeedRecord', idFeedRecord))
@@ -108,3 +112,4 @@ class FeedRecordService:
             return {"Deleted": True}
         except Exception as e:
             raise ValidationError(f"Error deleting feedRecord: {str(e)}")
+
