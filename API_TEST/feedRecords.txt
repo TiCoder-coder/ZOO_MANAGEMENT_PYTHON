@@ -1,10 +1,21 @@
 API POST
-{
-  "idFeedRecord": "feedrecord753",
-  "animalIdFeedRecord": "A1000",
-  "foodId": "FOOD11ư75d23",
-  "quantity": 2147483647
-}
+
+    True test:
+    {
+      "idFeedRecord": "feedrecord753",
+      "animalIdFeedRecord": "A1000",
+      "foodId": "FOOD11ư75d23",
+      "quantity": 214
+    }
+
+
+    False test:
+    {
+      "idFeedRecord": "feedrecord757893",
+      "animalIdFeedRecord": "A1000",
+      "foodId": "FOOD11ư75d23",
+      "quantity": -214
+    }
 
 API GET: Execute
 
@@ -13,12 +24,20 @@ API GET ID: feedrecord753
 
 
 API PUT: feedrecord753
+True test:
 {
+  "idFeedRecord": "feedrecord757893",
   "animalIdFeedRecord": "A1000",
   "foodId": "FOOD11ư75d23",
   "quantity": 741
 }
 
+False test:
+{
+  "idFeedRecord": "feedrecord757893",
+  "animalIdFeedRecord": "A1000",
+  "foodId": "FOOD11ư75d23",
+  "quantity": -741
+}
 
 API DELETE; feedrecord753
-
