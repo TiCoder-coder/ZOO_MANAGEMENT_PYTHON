@@ -1,7 +1,8 @@
 API POST: http://127.0.0.1:8000/api/animal/
+True test:
 {
-    "id": "A0123456789",
-    "name": "White Tiger",
+    "id": "Animal1233443",
+    "name": "dog",
     "age": 6,
     "species": "Panthera Tiger",
     "gender": "Male",
@@ -10,15 +11,26 @@ API POST: http://127.0.0.1:8000/api/animal/
     "enclosureId": "ENC1234567890"
 }
 
-
+False test:
+{
+    "id": "Animal1233443",
+    "name": "dog",
+    "age": -6,
+    "species": "Panthera Tiger",
+    "gender": "Male",
+    "weight": -180,
+    "healthStatus": "Healthy",
+    "enclosureId": "ENC1234567890"
+}
 API GET: khong can request
 
 
-API GET ID: A0123456789
+API GET ID: Animal123
 
 
-API PUT: A0123456789
+API PUT: Animal123
 {
+    "id": "Animal124",
     "name": "White Tiger",
     "age": 7,
     "species": "Panthera Tiger",
@@ -29,5 +41,5 @@ API PUT: A0123456789
 }
 
 
-API DELETE: 0123456789
+API DELETE: Animal123
 
