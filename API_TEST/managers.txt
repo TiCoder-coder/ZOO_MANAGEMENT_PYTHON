@@ -1,20 +1,20 @@
 API POST
 {
-  "name": "John Manager",
-  "userName": "hehemanagers",
-  "password": "John@1234",
-  "email": "john.manager@example.com",
-  "role": "manager"
+  "name": "John Manager Hamaa",
+  "userName": "johnhamaa",
+  "password": "Johna@1234444",
+  "email": "johnhehe.@gmail.com",
+  "role": "Manager"
 }
 
 
 API GET: Execute
 
 
-API GET ID: 68f8c5a013385a4dea0ad0a8
+API GET ID: 690f5896d27b5c0949ec6376
 
 
-API PATCH: 68f8c5a013385a4dea0ad0a8
+API PATCH: 690f5896d27b5c0949ec6376
 {
   "name": "New Staffsssss",
   "userName": "new_staffs",
@@ -25,6 +25,4 @@ API PATCH: 68f8c5a013385a4dea0ad0a8
   "lock_until": null
 }
 
-API DELETE: 68f8c5a013385a4dea0ad0a8
-
-
+API DELETE: 690f5896d27b5c0949ec6376
