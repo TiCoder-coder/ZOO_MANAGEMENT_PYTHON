@@ -1,25 +1,48 @@
-API POST:
-{
-  "idEnclosure": "ENC100",
-  "nameEnclosure": "Tiger",
-  "areaSize": "50",
-  "climate": "Tropical",
-  "capacity": 0
-}
+API POST:---------------------------------------------------------------------------------------------------------------
+
+  True test:
+  {
+    "idEnclosure": "ENC741258789",
+    "nameEnclosure": "enclosure",
+    "areaSize": "100m^2",
+    "climate": "Tropical",
+    "capacity": 214
+  }
+
+  False test:
+  {
+    "idEnclosure": "ENC74125dddd8",
+    "nameEnclosure": "enclosure",
+    "areaSize": "100m^2",
+    "climate": "Tropical",
+    "capacity": -214
+  }
 
 API GET: Execute
 
 
-API GET ID: ENC100
+API GET ID: ENC741258789
 
 
-API PUT: ENC100
-{
-  "nameEnclosure": "ENC100",
-  "areaSize": "70",
-  "climate": "Tropical",
-  "capacity": 1
-}
+API PUT: anima741852963
+True test:
+  {
+    "idEnclosure": "ENC741258789",
+    "nameEnclosure": "enclosure",
+    "areaSize": "100m^2",
+    "climate": "Tropical",
+    "capacity": 215
+  }
 
-API DELETE: ENC100
+  False test:
+  {
+    "idEnclosure": "ENC74125dddd8",
+    "nameEnclosure": "enclosure",
+    "areaSize": "100m^2",
+    "climate": "Tropical",
+    "capacity": -214
+  }
+
+
+API DELETE: ENC741258789
 
