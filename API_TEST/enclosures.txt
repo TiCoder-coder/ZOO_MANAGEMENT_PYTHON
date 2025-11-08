@@ -1,33 +1,25 @@
 API POST:
 {
-  "id": "anima741852963",
-  "name": "Hippo",
-  "age": 14,
-  "species": "Animal",
-  "gender": "Male",
-  "weight": 523,
-  "healthStatus": "Healthy",
-  "enclosureId": "ENC100"
+  "idEnclosure": "ENC100",
+  "nameEnclosure": "Tiger",
+  "areaSize": "50",
+  "climate": "Tropical",
+  "capacity": 0
 }
-
 
 API GET: Execute
 
 
-API GET ID: anima741852963
+API GET ID: ENC100
 
 
-API PUT: anima741852963
+API PUT: ENC100
 {
-  "name": "Hippo",
-  "age": 15,
-  "species": "Animal Hippo",
-  "gender": "Male",
-  "weight": 553,
-  "healthStatus": "Healthy",
-  "enclosureId": "ENC100"
+  "nameEnclosure": "ENC100",
+  "areaSize": "70",
+  "climate": "Tropical",
+  "capacity": 1
 }
 
-
-API DELETE: anima741852963
+API DELETE: ENC100
 
