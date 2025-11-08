@@ -1,5 +1,6 @@
 API POST: http://127.0.0.1:8000/api/animal/
 {
+    "id": "A0123456789",
     "name": "White Tiger",
     "age": 6,
     "species": "Panthera Tiger",
