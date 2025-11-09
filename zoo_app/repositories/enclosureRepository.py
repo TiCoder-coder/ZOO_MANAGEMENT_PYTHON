@@ -29,7 +29,10 @@ class EnclosureRepository:
     # Ham dung de xuat thong tin cua mot enclosure nao do theo id
     @staticmethod
     def find_by_id(idEnclosure):
-        return enclosure_collection.find_one({"idEnclosure": idEnclosure})
+        try:
+            return enclosure_collection.find_one({"_id": ObjectId(idEnclosure)})
+        except Exception:
+            return enclosure_collection.find_one({"idEnclosure": idEnclosure})
 
     
     # Cap nhap enclosure theo id
