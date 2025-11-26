@@ -58,7 +58,7 @@ class EnclosureService:
             result = EnclosureRepository.insert_one(validated_data)
             
             # Tra ve id vua insert
-            return str(result.inserted_id)
+            return validated_data["idEnclosure"]
         except Exception as e:
             raise ValidationError(f"Error creating enclosure: {str(e)}")
         
